@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roast & Aroma | Specialty Coffee & Artisan Bakery</title>
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body class="font-sans bg-coffee-cream text-[#1f1a17] antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-coffee-cream/90 backdrop-blur-md border-b border-[#e8e1d7]">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl font-bold text-coffee-dark flex items-center gap-2">
+                Roast <span class="text-coffee-accent">&</span> Aroma
+            </a>
+            <ul class="hidden md:flex items-center gap-8 list-none">
+                <li><a class="text-[#1f1a17] hover:text-coffee-accent font-medium text-sm transition-colors duration-200"
+                        href="#about">About</a></li>
+                <li><a class="text-[#1f1a17] hover:text-coffee-accent font-medium text-sm transition-colors duration-200"
+                        href="#menu">Menu</a></li>
+                <li><a class="text-[#1f1a17] hover:text-coffee-accent font-medium text-sm transition-colors duration-200"
+                        href="#features">Story</a></li>
+                <li><a class="text-[#1f1a17] hover:text-coffee-accent font-medium text-sm transition-colors duration-200"
+                        href="#contact">Contact</a></li>
+            </ul>
+            <button
+                class="open-booking-btn bg-coffee-accent hover:bg-coffee-hover text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-md shadow-coffee-accent/20 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
+                Reserve a Table
+            </button>
+
+            <!-- Cart / Bag Counter -->
+            <button
+                class="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 transition-colors cursor-pointer"
+                id="cartBtn" title="Your Order">
+                <svg class="w-6 h-6 text-coffee-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <!-- Бейдж корзины -->
+                <span id="cartCountBadge" style="display: none;"
+                    class="absolute -top-1 -right-1 bg-coffee-accent text-white text-[11px] font-bold w-5 h-5 rounded-full items-center justify-center z-20 shadow-sm leading-none pointer-events-none">
+                    0
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 overflow-hidden" id="about">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div class="lg:col-span-7">
+                <span
+                    class="inline-block bg-coffee-accent/15 text-coffee-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-5">
+                    Artisan Specialty Roastery
+                </span>
+                <h1
+                    class="font-serif text-4xl sm:text-5xl lg:text-[54px] font-bold leading-[1.15] text-coffee-dark mb-6">
+                    Brewed with Passion, <em class="text-coffee-accent italic">Served with Heart.</em>
+                </h1>
+                <p class="text-[#6b635b] text-base sm:text-lg leading-relaxed mb-9 max-w-lg">
+                    Experience ethically sourced specialty beans roasted to perfection, accompanied by fresh handmade
+                    pastries baked daily in London.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 mt-8">
+                    <button
+                        class="open-booking-btn bg-coffee-accent hover:bg-coffee-hover text-white font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full shadow-lg shadow-coffee-accent/30 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
+                        Book Table Online
+                    </button>
+                    <a href="#menu"
+                        class="inline-flex items-center justify-center border-2 border-coffee-dark text-coffee-dark hover:bg-coffee-dark hover:text-white font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-300 hover:-translate-y-0.5">
+                        Explore Menu
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative mt-8 lg:mt-0 w-full">
+                <img class="w-full h-115 object-cover rounded-3xl shadow-2xl shadow-coffee-dark/15 block"
+                    src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80"
+                    alt="Specialty Coffee Shop Interior" loading="eager">
+
+                <!-- Floating Card -->
+                <div
+                    class="absolute -bottom-6 left-4 sm:-left-6 bg-white py-4 px-6 rounded-2xl shadow-xl shadow-coffee-dark/10 flex items-center gap-4 border border-[#e8e1d7]/60">
+                    <div class="text-2xl font-extrabold text-coffee-dark">⭐ 4.9</div>
+                    <div>
+                        <div class="text-sm font-bold text-[#1f1a17]">500+ Local Reviews</div>
+                        <div class="text-xs text-[#6b635b]">London's Favorite Roast</div>
+                         <div class="text-xs text-[#6b635b]">Portfolio Demo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-20 md:py-28 bg-white border-y border-[#e8e1d7]" id="menu">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-14">
+                <span
+                    class="inline-block bg-coffee-accent/15 text-coffee-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                    Handcrafted Drinks
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-[40px] font-bold text-coffee-dark mb-4">
+                    Signature Coffee & Treats
+                </h2>
+                <p class="text-[#6b635b] text-base sm:text-lg">
+                    Carefully selected single-origin beans brewed by certified baristas.
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" id="menuFilter">
+                <button type="button" data-filter="all"
+                    class="menu-filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer bg-coffee-dark text-white shadow-sm">
+                    All
+                </button>
+                <button type="button" data-filter="coffee"
+                    class="menu-filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer bg-coffee-cream border border-[#e8e1d7] text-[#6b635b]  hover:border-coffee-dark">
+                    Coffee
+                </button>
+                <button type="button" data-filter="treats"
+                    class="menu-filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer bg-coffee-cream border border-[#e8e1d7] text-[#6b635b]  hover:border-coffee-dark">
+                    Treats
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div data-category="coffee"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80"
+                            alt="Velvet Flat White coffee in ceramic cup" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Velvet Flat White</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="3.80">£3.80</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Double ristretto espresso with silky textured steamed oat or whole milk.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="coffee"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+                            alt="Single Origin V60 pour over coffee" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">V60 Pour Over</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="4.50">£4.50</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Ethiopian heirloom beans with delicate floral notes, peach aroma, and crisp acidity.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="coffee"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80"
+                            alt="Cold nitro coffee with rich foam in a glass" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Nitro Cold Brew</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="4.75">£4.75</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Slow-steeped for 18 hours and nitrogen-infused on tap for an ultra-creamy head, velvety
+                            body, and deep dark chocolate notes.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="treats"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
+                            alt="Almond Croissant" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Almond Croissant</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="4.95">£4.95</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Flaky butter pastry loaded with rich almond frangipane cream and toasted flakes.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="treats"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80"
+                            alt="Chef's Pick" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Chef's Pick</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="5.40">£5.40</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Caramelized exterior with a silky, melt-in-the-middle creamy texture. Gluten-free recipe.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="treats"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?auto=format&fit=crop&w=800&q=80"
+                            alt="Pain au Chocolat" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Pain au Chocolat</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="4.50">£4.50</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Flaky multi-layered French pastry rolled with two rich bars of 70% dark Belgian chocolate.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="treats"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80"
+                            alt="Cardamom & Cinnamon Knot" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Cardamom & Cinnamon Knot</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="5.40">£5.40</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Traditional twisted brioche bun infused with freshly ground green cardamom and pearl sugar.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+
+                <div data-category="treats"
+                    class="bg-coffee-cream rounded-2xl overflow-hidden border border-[#e8e1d7] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-coffee-dark/10 flex flex-col group">
+                    <div class="overflow-hidden">
+                        <img class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                            src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Sourdough Avocado Toast" loading="lazy">
+                    </div>
+                    <div class="p-6 flex flex-col grow">
+                        <div class="flex justify-between items-baseline mb-2.5">
+                            <h3 class="font-serif text-xl font-bold text-coffee-dark">Sourdough Avocado Toast</h3>
+                            <span class="text-lg font-bold text-coffee-accent" data-price="6.20">£6.20</span>
+                        </div>
+                        <p class="text-[16px] text-[#6b635b] leading-relaxed mb-6 grow">
+                            Crushed Haas avocado, lemon zest, chili flakes, and cold-pressed olive oil on toasted
+                            Marylebone sourdough.
+                        </p>
+                        <button
+                            class="quick-order-btn self-start bg-coffee-dark hover:bg-coffee-accent text-white text-[15px] font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 cursor-pointer">
+                            Quick Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Features -->
+    <section class="py-20 md:py-28" id="features">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white p-9 rounded-2xl border border-[#e8e1d7] text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-coffee-dark/5 flex flex-col items-center">
+                    <div class="text-4xl mb-5 inline-block">🌱</div>
+                    <h3 class="font-serif text-xl font-bold text-coffee-dark mb-3">Direct-Trade Beans</h3>
+                    <p class="text-[16px] text-[#6b635b] leading-relaxed">
+                        We work directly with sustainable farming cooperatives in Colombia, Ethiopia, and Guatemala.
+                    </p>
+                </div>
+                <div
+                    class="bg-white p-9 rounded-2xl border border-[#e8e1d7] text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-coffee-dark/5 flex flex-col items-center">
+                    <div class="text-4xl mb-5 inline-block">🥐</div>
+                    <h3 class="font-serif text-xl font-bold text-coffee-dark mb-3">Baked Fresh Daily</h3>
+                    <p class="text-[16px] text-[#6b635b] leading-relaxed">
+                        All pastries and sourdough sandwiches are prepared every morning in our in-house micro bakery.
+                    </p>
+                </div>
+                <div
+                    class="bg-white p-9 rounded-2xl border border-[#e8e1d7] text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-coffee-dark/5 flex flex-col items-center">
+                    <div class="text-4xl mb-5 inline-block">💻</div>
+                    <h3 class="font-serif text-xl font-bold text-coffee-dark mb-3">Warm & Work-Friendly</h3>
+                    <p class="text-[16px] text-[#6b635b] leading-relaxed">
+                        Fast high-speed Wi-Fi, comfortable seating, and plugs for your productive remote work sessions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-coffee-dark text-[#dfd7cf] pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+                <div class="md:col-span-5 lg:col-span-6">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-4">Roast & Aroma</h3>
+                    <p class="text-sm text-[#bfaea0] leading-relaxed max-w-sm">Your friendly neighbourhood specialty
+                        coffee roastery and bakehouse. Serving community with
+                        warmth and care since 2021.</p>
+                </div>
+                <div class="md:col-span-3 lg:col-span-3">
+                    <h4 class="font-serif text-lg font-semibold text-white mb-4">Opening Hours</h4>
+                    <p class="text-sm text-[#bfaea0] mb-2">Mon – Fri: 07:30 – 18:00</p>
+                    <p class="text-sm text-[#bfaea0] mb-2">Saturday: 08:30 – 19:00</p>
+                    <p class="text-sm text-[#bfaea0] mb-2">Sunday: 09:00 – 17:00</p>
+                </div>
+                <div class="md:col-span-4 lg:col-span-3">
+                    <h4 class="font-serif text-lg font-semibold text-white mb-4">Visit Us</h4>
+                    <p class="text-sm text-[#bfaea0] mb-2">
+                        <a href="https://maps.google.com/?q=42+Baker+Street+London" target="_blank" rel="noopener"
+                            class="hover:text-white transition-colors duration-200">
+                            📍42 Baker Street, Marylebone<br>London W1U 7AL, United Kingdom
+                        </a>
+                    </p>
+                    <p class="text-sm text-[#bfaea0] mb-2">
+                        <a href="mailto:hello@roastaroma.co.uk" class="hover:text-white transition-colors duration-200">
+                            ✉️ hello@roastaroma.co.uk
+                        </a>
+                    </p>
+                    <p class="text-sm text-[#bfaea0] mb-2 flex items-center gap-2">
+                        <span>📞</span>
+                        <a href="tel:+442079460192" class="hover:text-white transition-colors duration-200">
+                            +44 20 7946 0192
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-xs text-[#8c7b6f]">
+                &copy; 2026 Roast & Aroma Coffee Ltd. All rights reserved. Built for digital preview.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Booking Form -->
+    <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs items-center justify-center p-4" id="bookingModal"
+        style="display: none;">
+        <div
+            class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl border border-[#e8e1d7] transform transition-all duration-300 scale-95 in-[.active]:scale-100">
+
+            <!-- Кнопка закрытия (крестик) -->
+            <button
+                class="modal-close absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 flex items-center justify-center rounded-full text-2xl text-[#6b635b] hover:text-coffee-dark hover:bg-coffee-cream transition-colors duration-200 cursor-pointer"
+                id="closeModalBtn">&times;</button>
+
+            <!-- Контейнер с формой -->
+            <div id="modalFormContainer">
+                <h3 class="font-serif text-2xl font-bold text-coffee-dark mb-1">Reserve Your Table</h3>
+                <p class="text-[16px] text-[#6b635b] mb-5">Save a spot or pre-order your favorite cup in advance.</p>
+
+                <form id="reservationForm" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Full
+                            Name</label>
+                        <input type="text" name="fullName" placeholder="e.g. John Miller" required
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#1f1a17] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all duration-200">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Phone
+                            Number / WhatsApp</label>
+                        <input type="tel" name="phone" placeholder="+44 7700 900077" required
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#1f1a17] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all duration-200">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Date &
+                            Time</label>
+                        <input type="datetime-local" id="bookingDateTime" name="dateTime" required
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#9ca3af] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all duration-200">
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Guests</label>
+                        <select name="guests"
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#9ca3af] focus:text-[#1f1a17] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all duration-200 cursor-pointer">
+                            <option value="1" class="text-[#1f1a17]">1 Person (Solo Work & Coffee)</option>
+                            <option value="2" selected class="text-[#1f1a17]">2 People</option>
+                            <option value="3-4" class="text-[#1f1a17]">3 - 4 People</option>
+                            <option value="5+" class="text-[#1f1a17]">5+ People (Group)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-coffee-accent hover:bg-coffee-hover text-white font-semibold text-[15px] py-3.5 rounded-full shadow-lg shadow-coffee-accent/30 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer mt-2">
+                        Confirm Reservation
+                    </button>
+                </form>
+            </div>
+
+            <!-- Экран успешной отправки -->
+            <div class="modal-success hidden text-center py-4" id="modalSuccess">
+                <div class="text-5xl mb-3">☕</div>
+                <h4 class="font-serif text-2xl font-bold text-coffee-dark mb-2">Booking Received!</h4>
+                <p class="text-sm text-[#6b635b] mb-6">Your table reservation request has been received. (Portfolio Demo
+                    Preview)
+                </p>
+                <button
+                    class="w-full bg-coffee-dark hover:bg-coffee-accent text-white font-semibold text-[15px] py-3 rounded-full transition-colors duration-200 cursor-pointer"
+                    id="successOkBtn">
+                    Done
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm items-center justify-center p-4"
+        style="display: none;">
+
+        <div
+            class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-[#e8e1d7] max-h-[90vh] overflow-y-auto">
+
+            <!-- Кнопка закрытия (крестик) -->
+            <button id="closeCartBtn" type="button"
+                class="absolute top-4 right-5 text-3xl text-[#6b635b] hover:text-coffee-dark cursor-pointer"
+                aria-label="Close cart">&times;</button>
+
+            <!-- ЭКРАН 1: СПИСОК ТОВАРОВ В КОРЗИНЕ -->
+            <div id="cartViewStep">
+                <h3 class="font-serif text-2xl font-bold text-coffee-dark mb-1">
+                    Your Order
+                </h3>
+                <p class="text-sm text-[#6b635b] mb-6">
+                    Review your coffee and treats before checkout.
+                </p>
+
+                <div id="cartItems" class="space-y-4">
+                    <!-- Элементы добавляются через JS -->
+                </div>
+
+                <div id="emptyCart" class="py-10 text-center text-[#6b635b]">
+                    <div class="text-4xl mb-3">🛍️</div>
+                    Your cart is empty. Add something delicious from our menu!
+                </div>
+
+                <div id="cartSummary" class="hidden border-t border-[#e8e1d7] mt-6 pt-5">
+                    <div class="flex justify-between items-center mb-5">
+                        <span class="font-semibold text-coffee-dark">Total</span>
+                        <span id="cartTotal" class="text-xl font-bold text-coffee-accent">£0.00</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button id="clearCartBtn" type="button"
+                            class="flex-1 border border-[#e8e1d7] rounded-full py-3 text-sm font-semibold text-[#6b635b] hover:bg-coffee-cream transition-colors cursor-pointer">
+                            Clear Order
+                        </button>
+                        <button id="goToCheckoutBtn" type="button"
+                            class="flex-1 bg-coffee-accent hover:bg-coffee-hover text-white text-sm font-semibold rounded-full py-3 shadow-md shadow-coffee-accent/20 transition-all cursor-pointer">
+                            Proceed to Details →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ЭКРАН 2: ВВОД ДАННЫХ КЛИЕНТА (Имя, Телефон, Примечание) -->
+            <div id="cartCheckoutStep" class="hidden">
+                <div class="flex items-center gap-2 mb-2">
+                    <button id="backToCartBtn" type="button"
+                        class="text-xs font-bold text-coffee-accent hover:underline cursor-pointer flex items-center gap-1">
+                        ← Back to Order
+                    </button>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-coffee-dark mb-1">
+                    Contact Details
+                </h3>
+                <p class="text-sm text-[#6b635b] mb-5">
+                    Where should we notify you when it's hot & ready?
+                </p>
+
+                <form id="orderForm" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Your
+                            Name</label>
+                        <input type="text" name="customerName" placeholder="e.g. Liam Smith" required
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#1f1a17] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Phone /
+                            WhatsApp</label>
+                        <input type="tel" name="customerPhone" placeholder="+44 7700 900077" required
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#1f1a17] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-coffee-dark mb-1.5">Order
+                            Type</label>
+                        <select name="orderType"
+                            class="w-full px-4 py-3 rounded-xl border border-[#e8e1d7] bg-coffee-cream text-sm text-[#1f1a17] focus:outline-none focus:border-coffee-accent focus:ring-2 focus:ring-coffee-accent/25 transition-all cursor-pointer">
+                            <option value="Takeaway" selected>Takeaway (Ready in 10-15 mins)</option>
+                            <option value="Dine-In">Dine-In (Enjoy at the bar)</option>
+                        </select>
+                    </div>
+
+                    <div
+                        class="p-3 bg-coffee-cream/60 rounded-xl border border-[#e8e1d7] flex justify-between items-center text-sm">
+                        <span class="text-[#6b635b]">Total Amount:</span>
+                        <span id="checkoutTotalDisplay" class="font-bold text-coffee-accent text-base">£0.00</span>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-coffee-accent hover:bg-coffee-hover text-white font-semibold text-[15px] py-3.5 rounded-full shadow-lg shadow-coffee-accent/30 transition-all cursor-pointer mt-2">
+                        Place Takeaway Order
+                    </button>
+                </form>
+            </div>
+
+            <!-- ЭКРАН 3: ФИНАЛЬНЫЙ ЭКРАН УСПЕХА ЗАКАЗА -->
+            <div id="cartSuccessStep" class="hidden text-center py-6">
+                <div class="text-5xl mb-3">🥐☕</div>
+                <h4 class="font-serif text-2xl font-bold text-coffee-dark mb-2">Demo Order Submitted</h4>
+                <p id="orderSuccessMessage" class="text-sm text-[#6b635b] mb-6">
+                    Our baristas are preparing your cup. We'll send an update to your phone shortly. Demo!
+                </p>
+                <button id="orderSuccessOkBtn" type="button"
+                    class="w-full bg-coffee-dark hover:bg-coffee-accent text-white font-semibold text-[15px] py-3 rounded-full transition-colors cursor-pointer">
+                    Done
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Custom Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none"></div>
+</body>
+
+</html>

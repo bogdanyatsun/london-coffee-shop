@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@theme {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --color-coffee-dark: #2b1810;
+  --color-coffee-light: #43281c;
+  --color-coffee-accent: #c68b59;
+  --color-coffee-hover: #b07543;
+  --color-coffee-cream: #faf7f2;
+}
